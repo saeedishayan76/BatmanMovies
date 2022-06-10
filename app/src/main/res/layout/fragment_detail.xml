@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".view.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_movie_detail"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:numStars="5"
+            android:stepSize="0.1"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="@color/yellow"
+            android:secondaryProgressTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_genre" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_margin="@dimen/base_margin"
+            android:id="@+id/tv_movie_title"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mont_bold"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_movie_detail"
+            tools:text="Batmain in 2005" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_movie_year"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/dp4"
+            android:textColor="@color/lightgray"
+            app:layout_constraintEnd_toStartOf="@id/tv_movie_genre"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            tools:text="2020 ." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:lines="1"
+            android:ellipsize="end"
+            android:id="@+id/tv_movie_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin"
+            android:textColor="@color/lightgray"
+            app:layout_constraintEnd_toStartOf="@id/tv_movie_time"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_year"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            tools:text="2020 ." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_movie_time"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4"
+            android:layout_marginTop="@dimen/base_margin"
+            android:textColor="@color/lightgray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_genre"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            tools:text="2020 ." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_plut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:fontFamily="@font/mont_bold"
+            android:text="@string/plot_summary"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating_bar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin"
+            android:id="@+id/tv_plut_data"
+            android:textSize="16sp"
+            android:fontFamily="@font/mont_reg"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:textColor="@color/lightgray"
+            app:layout_constraintTop_toBottomOf="@id/tv_plut" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:fontFamily="@font/mont_bold"
+            android:textSize="19sp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_actors"
+            android:text="@string/actors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_director_data"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv_actors_data"
+            android:textSize="16sp"
+            android:fontFamily="@font/mont_reg"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintTop_toBottomOf="@id/tv_actors"
+            android:textColor="@color/lightgray"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:fontFamily="@font/mont_bold"
+            android:textSize="19sp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_writer"
+            android:text="@string/writer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_actors_data"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv_writer_data"
+            android:textSize="16sp"
+            android:fontFamily="@font/mont_reg"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintTop_toBottomOf="@id/tv_writer"
+            android:textColor="@color/lightgray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp32"
+            android:layout_height="wrap_content"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:fontFamily="@font/mont_bold"
+            android:textSize="19sp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_director"
+            android:text="@string/director"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_plut_data"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv_director_data"
+            android:textSize="16sp"
+            android:fontFamily="@font/mont_reg"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:layout_marginTop="@dimen/dp8"
+            app:layout_constraintTop_toBottomOf="@id/tv_director"
+            android:textColor="@color/lightgray"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
